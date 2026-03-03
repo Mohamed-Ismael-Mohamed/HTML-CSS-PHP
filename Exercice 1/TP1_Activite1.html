@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<center><h3>Inscription des Etudiant en Ligne</h3><br><br>
+	<form name="Inscription Etudiant en Ligne" method="post" action="TP1_Activite1.php">
+		<table border=1>
+			<tr>
+				<td>Numero : </td>
+				<td><input type="text" name="Numero"></td>
+			</tr>
+			<tr>
+				<td>Nom et prénom : </td>
+				<td><input type="text" name="Nom_prenom"></td>
+			</tr>
+			<tr>
+				<td>Mot de passe : </td>
+				<td><input type="password" name="mdp"></td>
+			</tr>
+			<tr>
+				<td>Sexe : </td>
+				<td>
+					<input type="radio" name="Sexe" value="M">M
+					<input type="radio" name="Sexe" value="F">F
+				</td>
+			</tr>
+			<tr>
+				<td>Filiere : </td>
+				<td>
+					<input type="radio" name="Filiere" value="Informatique">Informatique
+					<input type="radio" name="Filiere" value="Comptabilite">Comptabilite
+					<input type="radio" name="Filiere" value="Logistique">Logistique
+				</td>
+			</tr>
+			<tr>
+				<td>Email : </td>
+				<td><input type="Email" name="email"></td>
+			</tr>
+			<tr>
+				<td>Adresse : </td>
+				<td><textarea name="Adresse" rows=20 cols=100></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="reset" value="Annuler"><input type="submit" value="Envoyer"></td>
+			</tr>
+		</table>
+	</form></center>
+</body>
+</html>
