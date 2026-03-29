@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<center>
+		<p>Inscription des Etudiants en ligne</p>
+		<form method="POST" action="Ajouter.php">
+			<table border=1>
+				<tr>
+					<td>Numero : </td>
+					<td><input type="number" name="numero"></td>
+				</tr>
+				<tr>
+					<td>Nom et prénoms : </td>
+					<td><input type="text" name="nom_prenom"></td>
+				</tr>
+				<tr>
+					<td>Mot de passe : </td>
+					<td><input type="password" name="mdp"></td>
+				</tr>
+				<tr>
+					<td>SEXE : </td>
+					<td>
+						<input type="radio" name="sexe" value="M">M
+						<input type="radio" name="sexe" value="F">F
+					</td>
+				</tr>
+				<tr>
+					<td>Filiere : </td>
+					<td>
+						<input type="radio" name="filiere" value="Informatique">Informatique
+						<input type="radio" name="filiere" value="Comptabilite">Comptabilite
+						<input type="radio" name="filiere" value="Logistique">Logistique
+					</td>
+				</tr>
+				<tr>
+					<td>Email : </td>
+					<td><input type="email" name="mail"></td>
+				</tr>
+				<tr>
+					<td>Adresse : </td>
+					<td><textarea rows=8 cols=18 name="adresse"></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="reset" value="Annuler"><input type="submit" value="Envoyer"></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
