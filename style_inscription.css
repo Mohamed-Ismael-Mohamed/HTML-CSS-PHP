@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* --- COULEURS DU DRAPEAU : FOND GEOMÉTRIQUE BLEU & VERT --- */
+    background: linear-gradient(135deg, #A8E1F8 50%, #51BD21 50%); /* Bleu ciel et Vert */
+    background-size: cover;
+    padding: 20px;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form {
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden; /* Pour que le header épouse les coins arrondis */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* --- HEADER À DEUX TONS AVEC LE LOGO CENTRÉ --- */
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Partie Logo : Fond Blanc propre */
+.logo-box {
+    background-color: white; /* Remplissage 1 */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #51BD21; /* Ligne verte de séparation */
+}
+
+.centered-logo {
+    width: 90px;
+    height: auto;
+}
+
+/* Partie Titre : Fond Bleu professionnel */
+.title-box {
+    background-color: #A8E1F8; /* Remplissage 2 : Bleu Ciel */
+    padding: 15px 0;
+    text-align: center;
+}
+
+.title-box h1 {
+    color: #1e3c72; /* Bleu foncé pour le titre */
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/* --- CORPS DU FORMULAIRE --- */
+.form-body {
+    padding: 30px;
+}
+
+.form-body h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.form-body .tagline {
+    color: #777;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Gestion des colonnes */
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-row .input-group {
+    flex: 1;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Animation labels et gestion de la date */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.group-date input + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.75rem;
+    color: #1e3c72; /* Bleu foncé pour le focus */
+    background: white;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+/* --- BOUTON ROUGE : LA COULEUR DE L'ÉTOILE --- */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #DD171D; /* Rouge de l'étoile */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #51BD21; /* Vert du drapeau au hover */
+}
+
+.form-footer { margin-top: 25px; font-size: 0.85rem; text-align: center; }
+.form-footer a { color: #1e3c72; text-decoration: none; font-weight: 600; }

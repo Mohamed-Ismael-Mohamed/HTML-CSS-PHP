@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Djibouti Sport Shop</title>
+    <link rel="stylesheet" href="style_inscription.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="registration-form">
+        <div class="header-container">
+            <div class="logo-box">
+                <img src="Logo_marque.png" alt="DSS Logo" class="centered-logo">
+            </div>
+            <div class="title-box">
+                <h1>Djibouti Sport Shop</h1>
+            </div>
+        </div>
+
+        <div class="form-body">
+            <h3>Créez votre Compte Administrateur !</h3>
+            <p class="tagline">Pour pouvoir manipuler la Base de Donnée</p>
+
+            <form action="traitement_inscription.php" method="POST">
+                <div class="input-row">
+                    <div class="input-group">
+                        <input type="text" name="nom" required placeholder=" ">
+                        <label>Nom complet</label>
+                    </div>
+                    <div class="input-group">
+                        <select name="genre" required>
+                            <option value="" disabled selected>Genre</option>
+                            <option value="Homme">Homme</option>
+                            <option value="Femme">Femme</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" name="email" required placeholder=" ">
+                    <label>Adresse Email</label>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <input type="tel" name="telephone" required placeholder=" ">
+                        <label>Téléphone (ex: 77...)</label>
+                    </div>
+                    <div class="input-group group-date">
+                        <input type="date" name="date_naissance" required placeholder=" ">
+                        <label>Date de naissance</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <select name="sport_prefere" required>
+                        <option value="" disabled selected>Votre sport favori</option>
+                        <option value="football">Football</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="fitness">Fitness / Musculation</option>
+                        <option value="athletisme">Athlétisme</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <input type="password" name="password" required placeholder=" ">
+                        <label>Mot de passe</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="confirm_password" required placeholder=" ">
+                        <label>Confirmation</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Rejoindre la communauté</button>
+            </form>
+
+            <div class="form-footer">
+                <p>Déjà membre ? <a href="Page_autorisation.php">Se connecter</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,555 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    /* Ce dégradé va du bleu (#00adef) au vert (#009640) */
+    background: linear-gradient(90deg, #00adef 0%, #009640 100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #e60012; /* rouge H&M */
+    border-bottom: 2px solid #e60012;
+    padding-bottom: 5px;
+}
+
+/* Hero section */
+.hero {
+    background: #111111;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffffff;
+    color:#111111;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #e60012;
+}
+
+/* Sections */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 60px 0 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e60012;
+    margin: 10px auto 0;
+}
+
+/* Grille catégories corrigée */
+.category-grid {
+    display: grid;
+    /* Crée 3 colonnes égales qui prennent tout l'espace */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Ajoute de l'espace (30px) entre les cartes */
+    gap: 30px; 
+    /* S'assure que la grille ne dépasse pas le container */
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.category-card {
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    /* AJOUTE CETTE LIGNE CI-DESSOUS */
+    object-position: top center; /* Force l'image à se recadrer depuis le haut */
+}
+
+.category-card h3 {
+    margin: 20px 0 10px;
+}
+
+.btn-small {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: background 0.2s;
+}
+
+.btn-small:hover {
+    background: #e60012;
+}
+
+/* Grille produits */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+/* --- STYLE SPÉCIFIQUE POUR LA PAGE CHAUSSURES (2x2) --- */
+
+.shoes-grid {
+    display: grid;
+    /* On force exactement 2 colonnes */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; /* Un peu plus d'espace pour l'aération */
+    width: 100%;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+/* On ajuste la taille des images pour le format 2x2 */
+.shoes-grid .category-card img {
+    height: 450px; /* Hauteur équilibrée pour le format large */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Optionnel : Centrer le titre des marques et le bouton */
+.shoes-grid .category-card h3 {
+    font-size: 1.5rem;
+    margin: 25px 0 15px;
+}
+
+/* Responsive : sur téléphone, on repasse à 1 seule colonne */
+@media (max-width: 768px) {
+    .shoes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.1rem;
+}
+
+.price {
+    font-weight: 700;
+    color: #e60012;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 0 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: #e60012;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    color: #aaa;
+}
+
+/* Page contact */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e60012;
+}
+
+/* Page title */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #e60012;
+    margin: 10px auto 0;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espace entre logo et texte */
+}
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 40%; /* logo rond (optionnel) */
+}
+/* Nouvelle classe pour les photos des saisons */
+.season-card-img {
+    width: 100%;           /* Prend toute la largeur du cadre */
+    height: 280px;         /* Hauteur fixe pour que les 3 cadres soient identiques */
+    object-fit: cover;     /* Remplit le cadre sans déformer l'image */
+    object-position: top;  /* Priorité au haut de l'image (pour voir les visages) */
+    display: block;        /* Supprime l'espace vide "fantôme" en bas de l'image */
+    margin: 0;             /* Force aucune marge */
+    padding: 0;            /* Force aucun espacement interne */
+    border: none;          /* Supprime toute bordure parasite */
+}
+
+/* On s'assure que le conteneur n'a pas de padding qui bloque l'image */
+.category-card {
+    padding-top: 0 !important; 
+    overflow: hidden; /* Coupe ce qui dépasse pour garder les coins arrondis */
+}
+
+/* Style pour la description sous le titre (optionnel pour aérer) */
+.season-desc {
+    padding: 0 15px;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+/* --- STYLES SPÉCIFIQUES POUR LA PAGE COLLECTION "CHALEUR" --- */
+
+.page-content {
+    margin-bottom: 80px;
+}
+
+.collection-gender {
+    margin-bottom: 40px;
+}
+
+.gender-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.gender-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 30px;
+    background-color: #e60012; /* Le rouge de tes titres */
+    border-radius: 4px;
+}
+
+/* Grille de produits : 1 ligne de 5 objets */
+.product-grid-collection {
+    display: grid;
+    /* Crée 5 colonnes égales de 1fr (1/5ème chacune) */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px; /* Espace réduit pour faire tenir 5 objets */
+}
+
+/* Style des cartes produits (inspiré de ton image 23, mais adapté) */
+.product-card-collection {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.product-card-collection:hover {
+    transform: translateY(-3px);
+}
+
+.product-card-collection img {
+    width: 100%;
+    height: 180px; /* Hauteur réduite pour faire tenir 5 objets */
+    object-fit: contain; /* Montre tout le vêtement sur fond blanc */
+    background-color: #f7f7f7; /* Léger fond gris pour détacher le blanc */
+}
+
+.product-card-collection h3 {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.product-card-collection .price {
+    font-weight: 700;
+    color: #e60012;
+    font-size: 1.1rem;
+}
+
+/* SÉPARATEUR GENDER */
+.gender-separator {
+    height: 1px;
+    background-color: #eee;
+    margin: 50px 0;
+}
+
+/* ZONE COACHING (Le magnifique texte en bas) */
+.coaching-zone {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 60px;
+}
+
+.coaching-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.coaching-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.coaching-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.coaching-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d1d1d1;
+    margin-bottom: 15px;
+}
+
+.coaching-text p strong {
+    color: #ffffff;
+}
+
+.coaching-sign-off {
+    font-weight: 700;
+    color: #e60012 !important; /* Le rouge DSS */
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+/* Style du bouton retour */
+.back-navigation {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.btn-back span {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.btn-back:hover {
+    color: #e60012; /* Ton rouge DSS */
+    border-color: #e60012;
+    background-color: #fff;
+    transform: translateX(-5px); /* Petit effet de glissement vers la gauche */
+}
+
+/* RESPONSIVE pour 5 produits */
+@media (max-width: 992px) {
+    .product-grid-collection {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur tablettes */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid-collection {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur mobiles */
+    }
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .nav-menu {
+        margin-top: 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}

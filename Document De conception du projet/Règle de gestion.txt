@@ -1,0 +1,25 @@
+1. Cycle de vie de la commande
+RG1 : Un client peut exister dans la base sans avoir encore passé de commande (0,n), mais une commande doit obligatoirement être rattachée à un client unique (1,1).
+
+RG2 : Une commande peut ne pas encore avoir de facture associée (cas d'une commande en attente de validation : 0,1), mais une facture concerne forcément une seule commande (1,1).
+
+RG3 : Le prix unitaire dans Details_Commande doit être enregistré au moment de la vente pour garder une trace historique, même si le prix du produit change plus tard dans la table Produit.
+
+2. Gestion financière (Paiements)
+RG4 : Un client peut effectuer plusieurs paiements (0,n), mais chaque transaction de paiement est identifiée comme appartenant à un seul client (1,1).
+
+RG5 : Une facture peut être réglée via plusieurs paiements différents (paiement en plusieurs fois autorisé : 0,n), mais un paiement spécifique ne peut solder qu'une seule facture (1,1).
+
+RG6 : La somme des montant_payee associés à une facture doit être égale au montant_total_facture pour que celle-ci soit considérée comme soldée.
+
+3. Logistique et Stock
+RG7 : Un produit appartient à une seule catégorie (1,1), alors qu'une catégorie peut contenir plusieurs produits ou aucun (0,n).
+
+RG8 : Une commande ne peut pas exister sans au moins un produit (1,n).
+
+RG9 : À chaque commande, la quantite choisie doit être soustraite du stock de l'entité Produit.
+
+4. Contraintes d'unicité (Dictionnaire)
+RG10 : L'adresse email du client doit être unique dans la base pour servir d'identifiant de connexion.
+
+RG11 : Chaque entité dispose d'un identifiant technique (clé primaire) unique et immuable.

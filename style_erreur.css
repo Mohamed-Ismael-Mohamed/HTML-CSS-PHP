@@ -1,0 +1,44 @@
+body {
+    background-color: #A8E1F8; /* Bleu ciel de Djibouti */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.box-erreur {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 350px;
+    border-bottom: 5px solid #51BD21; /* Ligne verte du drapeau */
+}
+
+h1 {
+    color: #DD171D; /* Rouge pour signaler l'erreur */
+    font-size: 22px;
+}
+
+p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.btn-retour {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1e3c72;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-retour:hover {
+    background-color: #333;
+}
