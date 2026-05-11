@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #A8E1F8 50%, #51BD21 50%); 
+    background-size: cover;
+    padding: 20px;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form {
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden; 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-box {
+    background-color: white; 
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #51BD21; 
+}
+
+.centered-logo {
+    width: 90px;
+    height: auto;
+}
+
+.title-box {
+    background-color: #A8E1F8; 
+    padding: 15px 0;
+    text-align: center;
+}
+
+.title-box h1 {
+    color: #1e3c72; 
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.form-body {
+    padding: 30px;
+}
+
+.form-body h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.form-body .tagline {
+    color: #777;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-row .input-group {
+    flex: 1;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.group-date input + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.75rem;
+    color: #1e3c72; 
+    background: white;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #DD171D; 
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #51BD21; 
+}
+
+.form-footer { margin-top: 25px; font-size: 0.85rem; text-align: center; }
+.form-footer a { color: #1e3c72; text-decoration: none; font-weight: 600; }
